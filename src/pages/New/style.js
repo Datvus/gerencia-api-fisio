@@ -34,15 +34,16 @@ export const NewStyled = styled.section`
 
       .awnser {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 5px;
 
-        margin: 10px 0px;
+        margin: 20px 0px;
       }
 
       button {
+        width: 70px;
+
         background-color: transparent;
 
         border: 1px solid var(--color-primary);
@@ -60,7 +61,15 @@ export const NewStyled = styled.section`
         background-color: var(--color-green);
       }
 
+      .no:hover {
+        background-color: var(--color-red);
+      }
+
       .content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
         h2 {
             font-size: 14px;
         }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RegisterStyled = styled.div`
+export const HistoryStyled = styled.section`
   width: 100vw;
   height: 100vh;
 
@@ -41,71 +41,41 @@ export const RegisterStyled = styled.div`
   }
 
   .form-modal {
-    width: 95%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 15px 0px;
-
-    form {
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        gap: 10px;
-    }
-
-    button {
-        width: 100px;
-        height: 25px;
-
-        background-color: transparent;
-
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
-
-        cursor: pointer;
-
-        transition: 200ms;
-
-        font-family: "Roboto";
-        font-size: 14px;
-
-        margin-top: 15px;
-    }
-  }
-
-  .box-input {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    
-    width: 100%;
 
-    span {
-        font-size: 12px;
+    width: 95%;
+
+    h3 {
+      margin: 10px 0px;
     }
 
-    input {
+    ul {
+      margin: 20px 0px;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
         width: 100%;
         height: 30px;
 
-        box-sizing: border-box;
-
-        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         border: 1px solid var(--color-primary);
         border-radius: 5px;
-    }
-  }
 
-  #inp-num {
-    max-width: 90px;
+        p {
+          width: 95%;
+        }
+      }
+    }
   }
 
   #close {
@@ -127,7 +97,7 @@ export const RegisterStyled = styled.div`
     cursor: pointer;
 
     img {
-        width: 25px;
+      width: 25px;
     }
   }
 `;

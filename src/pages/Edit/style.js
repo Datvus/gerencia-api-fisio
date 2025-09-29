@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RegisterStyled = styled.div`
+export const EditStyled = styled.section`
   width: 100vw;
   height: 100vh;
 
@@ -50,32 +50,32 @@ export const RegisterStyled = styled.div`
     margin: 15px 0px;
 
     form {
-        width: 100%;
+      width: 100%;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        gap: 10px;
+      gap: 10px;
     }
 
     button {
-        width: 100px;
-        height: 25px;
+      width: 100px;
+      height: 25px;
 
-        background-color: transparent;
+      background-color: transparent;
 
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
+      border: 1px solid var(--color-primary);
+      border-radius: 5px;
 
-        cursor: pointer;
+      cursor: pointer;
 
-        transition: 200ms;
+      transition: 200ms;
 
-        font-family: "Roboto";
-        font-size: 14px;
+      font-family: "Roboto";
+      font-size: 14px;
 
-        margin-top: 15px;
+      margin-top: 15px;
     }
   }
 
@@ -84,23 +84,23 @@ export const RegisterStyled = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    
+
     width: 100%;
 
     span {
-        font-size: 12px;
+      font-size: 12px;
     }
 
     input {
-        width: 100%;
-        height: 30px;
+      width: 100%;
+      height: 30px;
 
-        box-sizing: border-box;
+      box-sizing: border-box;
 
-        outline: none;
+      outline: none;
 
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
+      border: 1px solid var(--color-primary);
+      border-radius: 5px;
     }
   }
 
@@ -127,7 +127,7 @@ export const RegisterStyled = styled.div`
     cursor: pointer;
 
     img {
-        width: 25px;
+      width: 25px;
     }
   }
 `;

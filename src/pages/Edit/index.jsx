@@ -1,20 +1,20 @@
 import { useContext } from "react";
-import { RegisterStyled } from "./style";
+import { EditStyled } from "./style";
 import { AdmContext } from "../../contexts/AdmContext";
 import Loader from "../Loader";
 
-const Register = () => {
+const Edit = () => {
   const {
-    setIsModal,
-    newLicense,
-    setNewLicense,
-    createLicense,
-    loadingRegister,
+    selectedLicense,
+    setSelectedLicense,
+    setIsModalEdit,
+    updatePermission,
+    loadingEdit,
   } = useContext(AdmContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewLicense((prev) => ({
+    setSelectedLicense((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -22,17 +22,17 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createLicense();
+    updatePermission(selectedLicense, "Edição licença");
   };
 
   return (
-    <RegisterStyled onClick={() => setIsModal(false)}>
+    <EditStyled>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <button id="close" onClick={() => setIsModal(false)}>
+        <button id="close" onClick={() => setIsModalEdit(false)}>
           <img src="./icons/close-btn.png" alt="Fechar" />
         </button>
-        <h2>Registro de MAC</h2>
-        <h3>{newLicense.mac || "MAC não definido"}</h3>
+        <h2>Edição de licença</h2>
+        <h3>{selectedLicense.mac}</h3>
         <div className="form-modal">
           <form onSubmit={handleSubmit}>
             <div className="box-input">
@@ -40,7 +40,7 @@ const Register = () => {
               <input
                 type="text"
                 name="name"
-                value={newLicense.name || ""}
+                value={selectedLicense.name}
                 onChange={handleChange}
               />
             </div>
@@ -49,7 +49,7 @@ const Register = () => {
               <input
                 type="text"
                 name="company"
-                value={newLicense.company || ""}
+                value={selectedLicense.company}
                 onChange={handleChange}
               />
             </div>
@@ -58,30 +58,16 @@ const Register = () => {
               <input
                 type="text"
                 name="id_file"
-                value={newLicense.id_file || ""}
+                value={selectedLicense.id_file}
                 onChange={handleChange}
               />
             </div>
-            <div className="box-input">
-              <span>Dias de licenças:</span>
-              <input
-                type="number"
-                name="days_license"
-                value={newLicense.days_license || ""}
-                onChange={handleChange}
-                id="inp-num"
-              />
-            </div>
-            {loadingRegister ? (
-              <Loader />
-            ) : (
-              <button type="submit">Cadastrar</button>
-            )}
+            {loadingEdit ? <Loader /> : <button type="submit">Editar</button>}
           </form>
         </div>
       </div>
-    </RegisterStyled>
+    </EditStyled>
   );
 };
 
-export default Register;
+export default Edit;

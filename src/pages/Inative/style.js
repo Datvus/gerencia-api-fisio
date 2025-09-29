@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RegisterStyled = styled.div`
+export const InativeStyled = styled.section`
   width: 100vw;
   height: 100vh;
 
@@ -41,71 +41,39 @@ export const RegisterStyled = styled.div`
   }
 
   .form-modal {
-    width: 95%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    margin: 15px 0px;
-
-    form {
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        gap: 10px;
+    h4 {
+      text-align: center;
+      margin-top: 15px;
     }
 
     button {
-        width: 100px;
-        height: 25px;
+      width: 100px;
+      height: 25px;
 
-        background-color: transparent;
+      background-color: transparent;
 
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
+      border: 1px solid var(--color-red);
+      border-radius: 5px;
 
-        cursor: pointer;
+      cursor: pointer;
 
-        transition: 200ms;
+      transition: 200ms;
 
-        font-family: "Roboto";
-        font-size: 14px;
+      font-family: "Roboto";
+      font-size: 14px;
 
-        margin-top: 15px;
-    }
-  }
-
-  .box-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    
-    width: 100%;
-
-    span {
-        font-size: 12px;
+      margin: 15px 0px;
     }
 
-    input {
-        width: 100%;
-        height: 30px;
-
-        box-sizing: border-box;
-
-        outline: none;
-
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
+    button:hover {
+      background-color: var(--color-red);
+      color: var(--color-white);
     }
-  }
-
-  #inp-num {
-    max-width: 90px;
   }
 
   #close {
@@ -127,7 +95,7 @@ export const RegisterStyled = styled.div`
     cursor: pointer;
 
     img {
-        width: 25px;
+      width: 25px;
     }
   }
 `;
