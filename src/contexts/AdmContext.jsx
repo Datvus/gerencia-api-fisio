@@ -25,7 +25,7 @@ export const AdmProvider = ({ children }) => {
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [isModalHistory, setIsModalHistory] = useState(false);
 
-  const api = "http://localhost:3000/api/";
+  const api = "https://api-fisio-five.vercel.app/api/";
 
   const navigate = useNavigate();
 
