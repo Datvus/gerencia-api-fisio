@@ -193,7 +193,7 @@ export const AdmProvider = ({ children }) => {
     }
   };
 
-  const createLicense = async () => {
+  const createLicense = async (ind_motivo) => {
     setLoadingRegister(true);
 
     const { id, name, company, days_license, id_file } = newLicense;
@@ -230,10 +230,11 @@ export const AdmProvider = ({ children }) => {
       ind_new: false,
       status_license: true,
       dat_expira: `${yNew}-${mNew}-${dNew}`,
+      ind_motivo: ind_motivo,
     };
 
     try {
-      const res = await fetch(`${api}/update/permission`, {
+      const res = await fetch(`${api}update/permission`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -22,7 +22,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createLicense();
+    createLicense("Criação de licença.");
   };
 
   return (

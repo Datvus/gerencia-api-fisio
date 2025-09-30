@@ -33,7 +33,7 @@ const Dashboard = () => {
           className={page === "ativas" ? "active" : ""}
           onClick={() => setPage("ativas")}
         >
-          Licenças ativas
+          Licenças
         </button>
         <button
           className={page === "novas" ? "active" : ""}
